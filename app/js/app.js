@@ -6,7 +6,7 @@
     // puzzle types
     var types = [
         { id: 'sliding-puzzle', title: 'Sliding puzzle' },
-        { id: 'word-search-puzzle', title: 'Word search puzzle' }
+        // { id: 'word-search-puzzle', title: 'Word search puzzle' }
     ];
 
     /**
