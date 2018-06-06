@@ -45,6 +45,7 @@
 			<legend>Basic</legend>
 			<sliding-puzzle api="puzzle.api" size="3x3" src="img/mike.jpg"></sliding-puzzle>
 			<button ng-click="puzzle.api.solve()">solve</button>
+			moves: <strong>{{puzzle.api.moves}}</strong><br/>
 		</fieldset><br/>
 
 		<!--<fieldset id="sliding-advanced" ng-controller="slidingAdvancedCtrl">-->
