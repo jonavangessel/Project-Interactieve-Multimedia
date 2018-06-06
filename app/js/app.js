@@ -1,12 +1,12 @@
 (function(angular) {
     'use strict';
 
-    var app = angular.module('puzzleApp', ['slidingPuzzle', 'wordSearchPuzzle']);
+    var app = angular.module('puzzleApp', ['slidingPuzzle']);
 
     // puzzle types
     var types = [
         { id: 'sliding-puzzle', title: 'Sliding puzzle' },
-        { id: 'word-search-puzzle', title: 'Word search puzzle' }
+        // { id: 'word-search-puzzle', title: 'Word search puzzle' }
     ];
 
     /**
