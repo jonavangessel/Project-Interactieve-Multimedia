@@ -25,6 +25,10 @@ ul {
     padding: 0;
 }
 
+/* Bootstrap */
+.container {
+    text-align: center;
+}
 
 /* Puzzle widgets */
 
