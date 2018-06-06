@@ -118,25 +118,6 @@ ul {
     text-decoration: none;
 }
 
-#fork {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 149px;
-    height: 149px;
-    background: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png') no-repeat;
-}
-#powered {
-    position: fixed;
-    right: 20px;
-    bottom: 15px;
-    display: block;
-}
-#powered img {
-    opacity: 0.4;
-    width: 200px;
-}
 
 #sliding-advanced > div {
     float: left;
