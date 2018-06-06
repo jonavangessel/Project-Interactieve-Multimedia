@@ -3,6 +3,20 @@
 <head>
     <title>AngularJS puzzle</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDbFrB41EJL0Ayy4mltZHaN1X0E0wB4-tw",
+            authDomain: "pim-group1.firebaseapp.com",
+            databaseURL: "https://pim-group1.firebaseio.com",
+            projectId: "pim-group1",
+            storageBucket: "pim-group1.appspot.com",
+            messagingSenderId: "312587738910"
+        };
+        firebase.initializeApp(config);
+	</script>
     <script type="text/javascript" src="js/lib/angular/angular.js"></script>
     <script type="text/javascript" src="js/puzzle/slidingPuzzle.js"></script>
 	<script type="text/javascript" src="js/puzzle/wordSearchPuzzle.js"></script>
