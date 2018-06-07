@@ -2,8 +2,6 @@
 body {
     font: 12pt 'Arial', 'Helvetica';
     background-color: white;
-    margin-top: 50px;
-    /*margin-left: 20px;*/
 }
 fieldset {
     margin: 0 0 30px 0;
@@ -26,11 +24,23 @@ ul {
 }
 
 /* Bootstrap */
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .container-fluid {
     padding: 30px;
     text-align: center;
     background-color: black;
     color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn btn-primary btn-md {
+    text-align: center;
 }
 
 /* Puzzle widgets */
@@ -51,6 +61,11 @@ ul {
 }
 .sliding-puzzle.puzzle-solved td {
     border: none;
+}
+
+#sliding-simple {
+    width: 40%;
+    margin: auto;
 }
 
 /*.word-search-puzzle {*/
