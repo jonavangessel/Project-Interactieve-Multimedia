@@ -76,7 +76,8 @@
                 this.traverse(function(tile, row, col) {
                     this.grid[row][col] = tiles.shift();
                 });
-                console.log("test succeeded")
+                console.log("prachtigallemachtig")
+                alert("prachtigallemachtig")
             };
 
             /**

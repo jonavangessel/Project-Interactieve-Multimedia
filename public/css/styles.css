@@ -1,7 +1,8 @@
 /* General */
 body {
     font: 12pt 'Arial', 'Helvetica';
-    background-color: white;
+    color: #f8ce46;
+    background-color: #6280b1;
 }
 fieldset {
     margin: 0 0 30px 0;
@@ -23,6 +24,10 @@ ul {
     padding: 0;
 }
 
+.header {
+    width: 50%;
+    vertical-align: center;
+}
 /* Bootstrap */
 .container {
     display: block;
@@ -33,14 +38,18 @@ ul {
 .container-fluid {
     padding: 30px;
     text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-color: #f8ce46;
+    color: #6280b1;
+    margin: 50px 20px 50px 20px;
+    border-radius: 10px;
 }
 
 .btn btn-primary btn-md {
     text-align: center;
+}
+
+.media-object {
+    width: 120px;
 }
 
 /* Puzzle widgets */
