@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AngularJS puzzle</title>
+    <title>Lekker puzzelen</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
@@ -23,37 +23,45 @@
 	<!--<script type="text/javascript" src="js/puzzle/wordSearchPuzzle.js"></script>-->
 	<script type="text/javascript" src="js/app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
 <body ng-app="puzzleApp">
 
-    <div class="container-fluid">
-		<div class="media">
-			<div class="media-left">
-				<img src="img/kids.png" class="media-object">
-			</div>
-			<div class="media-body">
-				<h1>Welkom in het Rijksmuseum!<br><small>Leer meer van onze schilderijen met deze schuifpuzzel.</small></h1>
-			</div>
-		</div>
+<div class="row" id="header">
+    <div class="col-md-2">
+        <img src="img/kids.png">
     </div>
+    <div class="col-md-8">
+        <h1>Welkom in het Rijksmuseum!</h1>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
 	<!--<ul id="types">-->
 		<!--<li ng-repeat="t in types" ng-class="{'selected': t.id == type}">-->
 			<!--<a ng-href="#/{{t.id}}">{{t.title}}</a>-->
 		<!--</li>-->
 	<!--</ul>-->
 
-	<div ng-include="type"></div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div col-md-8>
+        <div ng-include="type"></div>
 
-	<script type="text/ng-template" id="sliding-puzzle">
-		<div id="sliding-simple">
-			<fieldset>
-				<sliding-puzzle api="puzzle.api" size="3x3" src="img/mike.jpg"></sliding-puzzle>
-				<button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
-				moves: <strong>{{puzzle.api.moves}}</strong><br/>
-			</fieldset><br/>
-		</div>
-	</script>
+        <script type="text/ng-template" id="sliding-puzzle">
+            <div id="sliding-simple">
+                <fieldset>
+                    <sliding-puzzle api="puzzle.api" size="3x3" src="img/mike.jpg"></sliding-puzzle>
+                    <button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
+                    moves: <strong>{{puzzle.api.moves}}</strong><br/>
+                </fieldset><br/>
+            </div>
+        </script>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+	<
 
 	<!--<script type="text/ng-template" id="word-search-puzzle">-->
 		<!--<div id="word-search" ng-controller="wordSearchCtrl">-->
