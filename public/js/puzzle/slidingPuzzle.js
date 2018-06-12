@@ -76,8 +76,7 @@
                 this.traverse(function(tile, row, col) {
                     this.grid[row][col] = tiles.shift();
                 });
-                console.log("prachtigallemachtig")
-                alert("prachtigallemachtig")
+                console.log("prachtigallemachtig");
             };
 
             /**
@@ -202,4 +201,5 @@
             }
         };
     });
+
 })(window.angular);
