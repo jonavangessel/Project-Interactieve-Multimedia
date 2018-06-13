@@ -36,19 +36,22 @@
     <h1 class="header-text">Welkom in het Rijksmuseum!</h1>
 </header>
 
-        <div ng-include="type"></div>
+<div ng-include="type"></div>
 
-        <script type="text/ng-template" id="sliding-puzzle">
-            <div id="sliding-simple">
-                <fieldset>
-                    <sliding-puzzle api="puzzle.api" size="4x4" id="image"></sliding-puzzle>
-                    <button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
-                    <button type="reset" class="btn btn-primary btn-md" ng-click="">Reset</button>
-                    <button class="btn btn-primary btn-md" title="Titel" data-toggle="popover" data-trigger="focus" data-content="Hier word je slim van">Info</button>
-                    <!--moves: <strong>{{puzzle.api.moves}}</strong><br/>-->
-                </fieldset><br/>
-            </div>
-        </script>
+
+<script type="text/ng-template" id="sliding-puzzle">
+    <div class="row">
+        <div class="col-md-12">
+            <fieldset>
+                <sliding-puzzle api="puzzle.api" size="4x4" id="image"></sliding-puzzle>
+                <button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
+                <button type="reset" class="btn btn-primary btn-md" ng-click="">Reset</button>
+                <button class="btn btn-primary btn-md" title="Titel" data-toggle="popover" data-trigger="focus" data-content="Hier word je slim van">Info</button>
+                <!--moves: <strong>{{puzzle.api.moves}}</strong><br/>-->
+            </fieldset>
+        </div>
+    </div>
+</script>
 
 	<!--<script type="text/ng-template" id="word-search-puzzle">-->
 		<!--<div id="word-search" ng-controller="wordSearchCtrl">-->
@@ -59,7 +62,7 @@
 			<!--</ul>-->
 			<!--<word-search-puzzle matrix="matrix" words="words" api="puzzle"></word-search-puzzle>-->
 			<!--<div class="status">-->
-				<!--<button ng-click="puzzle.solve()" ng-show="!puzzle.solved" class="solve">solve</button>-->
+				<!--<button ng-click="puzzle.solve()" ng-sho w="!puzzle.solved" class="solve">solve</button>-->
 				<!--<strong ng-show="puzzle.solved" ng-show="puzzle.solved">Solved!</strong>-->
 			<!--</div>-->
 		<!--</div>-->
