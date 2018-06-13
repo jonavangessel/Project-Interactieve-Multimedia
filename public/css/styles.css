@@ -28,6 +28,33 @@ h1 {
     font-size: 50px;
 }
 
+header {
+    min-height: 200px;
+    overflow: hidden;
+}
+
+header h1 {
+    margin-top: 10px;
+    font-size: 500%;
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    /*background: url('/public/img/rijks.jpg') no-repeat scroll center !important;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*background-size: cover;*/
+    /*-o-background-size: cover;*/
+}
+
+.header-text {
+    display: block;
+    vertical-align: center;
+}
+
+
 /* Bootstrap */
 .container {
     display: block;
