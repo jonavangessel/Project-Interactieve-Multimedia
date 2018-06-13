@@ -1,6 +1,9 @@
 /* General */
-body {
+* {
     font-family: 'Jua', sans-serif;
+}
+
+body {
     color: #f8ce46;
     background-color: #6280b1;
 }
@@ -11,17 +14,6 @@ fieldset {
     background-color: #f8ce46;
     border-radius: 10px;
     display: inline-block;
-}
-legend {
-    font-weight: bold;
-    padding: 3px 12px;
-    display: block;
-    background-color: #e4e4e4;
-    border-radius: 6px;
-}
-ul {
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
@@ -50,58 +42,47 @@ header h1 {
 }
 
 .header-text {
-    display: block;
-    vertical-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+form {
+    font-size: 200%;
+    text-align: center;
+    margin: auto;
+    /*margin-top: 40%;*/
+    /*margin-bottom: 50%;*/
 }
 
 
 /* Bootstrap */
-.container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#header {
-    text-align: center;
-    background-color: #f8ce46;
-    color: #6280b1;
-    margin: 50px 20px 50px 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#header .col-md-8 {
-    height: inherit;
-}
-
-.btn btn-primary btn-md {
-    text-align: center;
-}
-
-.col-md-8 h1 {
-    overflow: hidden;
-    vertical-align: center;
-}
-
-.col-md-2 img {
-    width: 150px;
-    overflow: auto;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
+#form-column {
+    height: 10%;
 }
 
 @media (max-width: 995px)
 {
-    .col-md-2 img {
-        display: none;
-    }
+    /*.col-md-2 img {*/
+        /*display: none;*/
+    /*}*/
+}
+
+.form-control {
+    margin: auto;
+    width: 10%;
+    max-width: 450px;
+}
+
+label {
+    text-align: center;
 }
 
 /* Puzzle widgets */
 
 .sliding-puzzle {
+    width: 50%;
+    margin: auto;
     border: 1px solid #9e9e9e;
     border-spacing: 0;
 }
@@ -123,43 +104,6 @@ header h1 {
     width: 40%;
     margin: auto;
 }
-
-/*.word-search-puzzle {*/
-    /*border: 1px solid #999;*/
-/*}*/
-/*.word-search-puzzle td {*/
-    /*background-color: white;*/
-    /*-moz-user-select: -moz-none;*/
-    /*-khtml-user-select: none;*/
-    /*-webkit-user-select: none;*/
-    /*-ms-user-select: none;*/
-/*}*/
-/*.word-search-puzzle.puzzle-solved td {*/
-    /*background-color: #eee;*/
-/*}*/
-/*.word-search-puzzle td span {*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-    /*width: 30px;*/
-    /*height: 30px;*/
-    /*text-align: center;*/
-    /*user-select: none;*/
-    /*cursor: pointer;*/
-/*}*/
-/*.word-search-puzzle .puzzle-found {*/
-    /*background-color: #eee;*/
-/*}*/
-/*.word-search-puzzle .puzzle-selected {*/
-    /*background-color: #f5f5f5;*/
-/*}*/
-/*.word-search-puzzle .puzzle-message span {*/
-    /*background-color: #ffffcc;*/
-    /*color: red;*/
-    /*font-weight: bold;*/
-    /*border-radius: 15px;*/
-    /*box-shadow: 0 0 5px #444;*/
-/*}*/
-
 
 /* Application */
 
@@ -195,63 +139,3 @@ header h1 {
     color: black;
     text-decoration: none;
 }
-
-
-/*#sliding-advanced > div {*/
-    /*float: left;*/
-    /*margin: 0 40px 0 0;*/
-    /*min-width: 300px;*/
-/*}*/
-/*#sliding-advanced .sliding-puzzle {*/
-    /*clear: both;*/
-    /*margin-top: 30px;*/
-/*}*/
-/*#sliding-advanced h2 {*/
-    /*margin: 0 0 10px 0;*/
-    /*font-weight: bold;*/
-/*}*/
-/*#sliding-advanced .status {*/
-    /*float: left;*/
-    /*width: 40%;*/
-    /*height: 50px;*/
-/*}*/
-/*#sliding-advanced .size {*/
-    /*float: right;*/
-    /*height: 50px;*/
-    /*text-align: right;*/
-/*}*/
-/*#sliding-advanced .src input {*/
-    /*width: 98%;*/
-    /*font-family: "Courier New";*/
-    /*margin-bottom: 4px;*/
-/*}*/
-
-/*#word-search {*/
-    /*position: relative;*/
-/*}*/
-/*#word-search .word-search-puzzle {*/
-    /*float: left;*/
-/*}*/
-/*#word-search .words {*/
-    /*list-style: none;*/
-    /*float: left;*/
-    /*margin: 4px 20px 0 0;*/
-/*}*/
-/*#word-search .words li {*/
-    /*font-size: 12px;*/
-    /*margin-bottom: 4px;*/
-    /*text-align: center;*/
-/*}*/
-/*#word-search .words .found {*/
-    /*color: #bbb;*/
-    /*text-decoration: line-through;*/
-    /*font-weight: normal*/
-/*}*/
-/*#word-search .status {*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 330px;*/
-    /*text-align: center;*/
-    /*width: 80px;*/
-    /*font-weight: bold;*/
-/*}*/
