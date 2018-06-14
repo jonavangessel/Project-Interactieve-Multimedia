@@ -55,6 +55,9 @@ form {
     /*margin-bottom: 50%;*/
 }
 
+button #info {
+    overflow: scroll;
+}
 
 /* Bootstrap */
 

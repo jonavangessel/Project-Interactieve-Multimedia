@@ -43,10 +43,10 @@
     <div class="row">
         <div class="col-md-12">
             <fieldset>
-                <sliding-puzzle api="puzzle.api" size="4x4" src="img/mike.jpg"></sliding-puzzle>
+                <sliding-puzzle api="puzzle.api" size="4x4" src="img/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg"></sliding-puzzle>
                 <button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
                 <button type="reset" class="btn btn-primary btn-md" ng-click="">Reset</button>
-                <button class="btn btn-primary btn-md" title="Titel" data-toggle="popover" data-trigger="focus" data-content="Hier word je slim van">Info</button>
+                <button id="info" class="btn btn-primary btn-md" data-toggle="popover" data-trigger="focus">Info</button>
                 <!--moves: <strong>{{puzzle.api.moves}}</strong><br/>-->
             </fieldset>
         </div>
