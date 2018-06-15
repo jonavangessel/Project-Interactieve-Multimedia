@@ -8,7 +8,6 @@ body {
     background-color: #6280b1;
 }
 fieldset {
-    width: inherit;
     margin: auto;
     padding: 18px;
     border: 2px solid #6280b1;
@@ -27,8 +26,12 @@ header {
 }
 
 header h1 {
-    margin-top: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 500%;
+    width: 100%;
 }
 
 .header-image {
@@ -40,11 +43,6 @@ header h1 {
     /*-moz-background-size: cover;*/
     /*background-size: cover;*/
     /*-o-background-size: cover;*/
-}
-
-.header-text {
-    width: 100%;
-    margin: auto;
 }
 
 form {
@@ -82,6 +80,8 @@ label {
 /* Puzzle widgets */
 
 .sliding-puzzle {
+    margin: auto;
+    display: inline-block;
     border: 1px solid #9e9e9e;
     border-spacing: 0;
 }
@@ -102,7 +102,7 @@ label {
 /* Application */
 
 #types {
-    margin: 0 0 40px 0px;
+    margin: 0 0 40px 0;
     padding: 10px;
     list-style: none;
     border-bottom: 1px solid #ddd;

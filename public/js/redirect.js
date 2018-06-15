@@ -1,3 +1,3 @@
 function redirectPage() {
-    window.location="index.html";
+    window.location="puzzle.html";
 }

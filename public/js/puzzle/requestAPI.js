@@ -6,7 +6,7 @@ $( document ).ready(function() {
                 data += value.description;
             }
         });
-        alert(data)
+        // alert(data)
     });
 });
 
