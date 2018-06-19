@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Kinderen in het Rijksmuseum</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kinderen in het Rijksmuseum</title>
+
 	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 	<script>
         // Initialize Firebase
@@ -18,22 +21,24 @@
         };
         firebase.initializeApp(config);
 	</script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/angular/angular.js"></script>
     <script type="text/javascript" src="js/puzzle/slidingPuzzle.js"></script>
-	<!--<script type="text/javascript" src="js/puzzle/wordSearchPuzzle.js"></script>-->
 	<script type="text/javascript" src="js/app.js"></script>
     <script src="js/puzzle/requestAPI.js"></script>
     <script src="js/popover.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style-mainPage.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
+
 <body ng-app="puzzleApp">
 
-<header class="header-image">
-    <h1 class="header-text">Welkom in het Rijksmuseum!</h1>
+<header>
+    <h1>Welkom in het Rijksmuseum!</h1>
 </header>
 
 <div ng-include="type"></div>
@@ -44,10 +49,13 @@
         <div class="col-md-12">
             <fieldset>
                 <sliding-puzzle api="puzzle.api" size="4x4" src="img/nachtwacht.jpg"></sliding-puzzle>
-                <button type="button" class="btn btn-primary btn-md" ng-click="puzzle.api.solve()">Oplossen</button>
-                <button type="reset" class="btn btn-primary btn-md" ng-click="">Reset</button>
-                <button class="btn btn-primary btn-md" title="Titel" data-placement="top" data-toggle="popover" data-trigger="focus" data-content="Hier word je slim van">Info</button>
-                <!--moves: <strong>{{puzzle.api.moves}}</strong><br/>-->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" ng-click="puzzle.api.solve()">Oplossen</button>
+                    <button type="reset" class="btn btn-primary" onclick="window.location.reload()">Reset</button>
+                    <button class="btn btn-primary" title="Titel" data-placement="top" data-toggle="popover" data-trigger="focus" data-content="Hier word je slim van">Info</button>
+                    <button type="button" class="btn btn-primary" id="btn non-clickable">Moves: <strong>{{puzzle.api.moves}}</strong></button>
+                </div>
+                <!--<br/>-->
             </fieldset>
         </div>
     </div>

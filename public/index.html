@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Kinderen in het Rijksmuseum</title>
-    <script src="js/redirect.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/style-index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="header-image">
-        <h1 class="header-text">Welkom in het Rijksmuseum!</h1>
-    </header>
 
-    <div class="col-md-12" id="form-column">
+<body>
+    <div class="col-md-12">
+        <header>
+            <h1>Welkom in het Rijksmuseum!</h1>
+        </header>
+    </div>
+
+    <div class="col-md-12">
         <form>
-            <div class="form-group">
-                <label for="reference">Vul hier het nummer van het schilderij in</label>
-                <input type="text" class="form-control" id="reference">
-            </div>
-            <form action="puzzle.html">
-                <input type="button" class="btn btn-primary btn-lg" value="Ga verder"/>
-            </form>
+            <label for="reference">Vul hier het nummer van het schilderij in</label>
+            <input type="text" class="form-control" id="reference">
+            <a href="mainPage.html" class="btn btn-info btn-lg" role="button">Ga verder</a>
             <!--<button type="button" class="btn btn-primary btn-lg" onclick="redirectPage();">Ga verder</button>-->
             <!--When working with real on site numerical references for loading a particular image,
             change the value from attribute "type" to "submit".-->
         </form>
+    </div>
+
+    <div class="col-md-12 footer">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">
+                <a href="https://www.facebook.com/rijksmuseum/" role="button" target="_blank">
+                    <i class="fa fa-facebook-square fa-2x social" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="https://twitter.com/rijksmuseum" role="button" target="_blank">
+                    <i class="fa fa-twitter fa-2x social" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="https://www.instagram.com/rijksmuseum/" role="button" target="_blank">
+                    <i class="fa fa-instagram fa-2x social" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="https://www.youtube.com/user/RijksmuseumAmsterdam" role="button" target="_blank" >
+                    <i class="fa fa-youtube-play fa-2x social" aria-hidden="true"></i>
+                </a>
+            </button>
+        </div>
+        <p><a href="https://www.rijksmuseum.nl/">https://www.rijksmuseum.nl/</a> | Kinderen in het Rijksmuseum &copy; 2018</p>
     </div>
 
 
