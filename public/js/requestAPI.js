@@ -9,19 +9,39 @@
 //         alert(data)
 //     });
 // });
+//
+// function klik() {
+//     $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
+//         var dataTitle = '';
+//         var dataDescription = '';
+//         $.each(status, function (key, value) {
+//             dataDescription += value.description;
+//             dataTitle += value.titles;
+//         });
+//         document.getElementById("bij").setAttribute("title", dataTitle);
+//         document.getElementById("bij").setAttribute("data-content", dataDescription)
+//     });
+// }
 
-function klik() {
-    $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
-        var dataTitle = '';
-        var dataDescription = '';
-        $.each(status, function (key, value) {
-            dataDescription += value.description;
-            dataTitle += value.titles;
-        });
-        document.getElementById("bij").setAttribute("title", dataTitle);
-        document.getElementById("bij").setAttribute("data-content", dataDescription)
+/**
+ * Uses API to display description and title in popover
+ */
+
+$(document).ready(function(){
+    var dataDescription = 'empty';
+    var dataTitle = 'empty';
+
+    $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function(data) {
+        dataDescription = dataDescription.replace("empty", "'" + data.artObject.description + "'");
+        dataTitle = dataTitle.replace("empty", "'" + data.artObject.title + "'")
     });
-}
+
+    $('[data-toggle="popover"]').popover({title: dataTitle, content: dataDescription, animation: true});
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+});
 
 
 

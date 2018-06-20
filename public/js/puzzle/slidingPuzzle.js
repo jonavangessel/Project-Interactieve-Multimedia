@@ -76,7 +76,9 @@
                 this.traverse(function(tile, row, col) {
                     this.grid[row][col] = tiles.shift();
                 });
-                console.log("prachtigallemachtig");
+                var el = document.querySelector('.transparentOverlay');
+                el.classList.remove('transparentOverlay');
+                el.classList.add('overlay');
             };
 
             /**

@@ -26,54 +26,69 @@
     <script type="text/javascript" src="js/lib/angular/angular.js"></script>
     <script type="text/javascript" src="js/puzzle/slidingPuzzle.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-    <script src="js/puzzle/requestAPI.js"></script>
-    <script src="js/popover.js"></script>
+    <script src="js/requestAPI.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style-mainPage.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body ng-app="puzzleApp">
 
-<header>
-    <h1>Welkom in het Rijksmuseum!</h1>
-</header>
+<div class="col-md-12">
+    <header>
+        <h1>Welkom in het Rijksmuseum!</h1>
+    </header>
+</div>
 
-<div ng-include="type"></div>
+<div class="col-md-12" ng-include="type">
 
+</div>
+
+<div class="col-md-12 footer">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">
+            <a href="https://www.facebook.com/rijksmuseum/" role="button" target="_blank">
+                <i class="fa fa-facebook-square fa-2x social" aria-hidden="true"></i>
+            </a>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <a href="https://twitter.com/rijksmuseum" role="button" target="_blank">
+                <i class="fa fa-twitter fa-2x social" aria-hidden="true"></i>
+            </a>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <a href="https://www.instagram.com/rijksmuseum/" role="button" target="_blank">
+                <i class="fa fa-instagram fa-2x social" aria-hidden="true"></i>
+            </a>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <a href="https://www.youtube.com/user/RijksmuseumAmsterdam" role="button" target="_blank" >
+                <i class="fa fa-youtube-play fa-2x social" aria-hidden="true"></i>
+            </a>
+        </button>
+    </div>
+    <p><a href="https://www.rijksmuseum.nl/">https://www.rijksmuseum.nl/</a> | Kinderen in het Rijksmuseum &copy; 2018</p>
+</div>
 
 <script type="text/ng-template" id="sliding-puzzle">
-    <div class="row">
-        <div class="col-md-12">
-            <fieldset>
-                <sliding-puzzle id="hello" api="puzzle.api" size="4x4" src="img/nachtwacht.jpg"></sliding-puzzle>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary" ng-click="puzzle.api.solve()">Oplossen</button>
-                    <button type="reset" class="btn btn-primary" onclick="window.location.reload()">Reset</button>
-                    <button id="bij" onclick="klik()" class="btn btn-primary" title="Titel" data-placement="top" data-toggle="popover" data-trigger="focus">Info</button>
-                    <button type="button" class="btn btn-primary" id="btn non-clickable">Moves: <strong>{{puzzle.api.moves}}</strong></button>
-                </div>
-                <!--<br/>-->
-            </fieldset>
+    <fieldset>
+        <sliding-puzzle id="hello" api="puzzle.api" size="4x4" src="img/mike.jpg"></sliding-puzzle>
+        <div class="transparentOverlay">
+            <div class="text">Hello world!</div>
         </div>
-    </div>
+        <div class="col-md-12">
+            <div class="btn-group puzzle">
+                <button type="button" class="btn btn-primary" ng-click="puzzle.api.solve()">oplossen</button>
+                <button type="reset" class="btn btn-primary" onclick="window.location.reload()">reset</button>
+                <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" data-placement="auto top">info</a>
+                <button type="button" class="btn btn-primary">score: <strong>{{puzzle.api.moves}}</strong></button>
+            </div>
+        </div>
+    </fieldset>
 </script>
 
-	<!--<script type="text/ng-template" id="word-search-puzzle">-->
-		<!--<div id="word-search" ng-controller="wordSearchCtrl">-->
-			<!--<ul class="words">-->
-				<!--<li ng-repeat="word in puzzle.words" ng-class="{'found': word.found}">-->
-					<!--{{word.name}}-->
-				<!--</li>-->
-			<!--</ul>-->
-			<!--<word-search-puzzle matrix="matrix" words="words" api="puzzle"></word-search-puzzle>-->
-			<!--<div class="status">-->
-				<!--<button ng-click="puzzle.solve()" ng-sho w="!puzzle.solved" class="solve">solve</button>-->
-				<!--<strong ng-show="puzzle.solved" ng-show="puzzle.solved">Solved!</strong>-->
-			<!--</div>-->
-		<!--</div>-->
-	<!--</script>-->
 </body>
 </html>
