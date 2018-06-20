@@ -138,10 +138,10 @@
             restrict: 'EA',
             replace: true,
             template: '<table class="sliding-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
-                '<tr ng-repeat="($row, row) in puzzle.grid">' +
-                '<td ng-repeat="($col, tile) in row" ng-click="puzzle.move($row, $col)" ng-style="tile.style" ng-class="{\'puzzle-empty\': tile.empty}" title="{{tile.id}}"></td>' +
-                '</tr>' +
-                '</table>',
+            '<tr ng-repeat="($row, row) in puzzle.grid">' +
+            '<td ng-repeat="($col, tile) in row" ng-click="puzzle.move($row, $col)" ng-style="tile.style" ng-class="{\'puzzle-empty\': tile.empty}" title="{{tile.id}}"></td>' +
+            '</tr>' +
+            '</table>',
             scope: {
                 size: '@',
                 src: '@',

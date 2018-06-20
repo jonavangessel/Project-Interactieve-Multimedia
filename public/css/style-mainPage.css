@@ -97,7 +97,8 @@ header h1 {
 .sliding-puzzle {
     margin: auto;
     display: inline-block;
-    border: 1px solid #9e9e9e;
+    /*border: 15px solid #f8ce46;*/
+    /*border-radius: 10px;*/
     border-spacing: 0;
 }
 .sliding-puzzle td {
