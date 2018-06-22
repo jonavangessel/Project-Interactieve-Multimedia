@@ -7,6 +7,13 @@ $( document ).ready(function() {
         var description = data.replace(/undefined/g, "");
         alert(description)
     });
+
+
+    $('[data-toggle="popover"]').popover({title: "title", content: "description", animation: true});
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
 });
 
 // function klik() {
