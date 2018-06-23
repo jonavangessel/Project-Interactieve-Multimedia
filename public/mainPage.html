@@ -73,6 +73,10 @@
     <p><a href="https://www.rijksmuseum.nl/">https://www.rijksmuseum.nl/</a> | Kinderen in het Rijksmuseum &copy; 2018</p>
 </div>
 
+<div onclick="off()" id="overlay">
+    <div id="text"></div>
+</div>
+
 <script type="text/ng-template" id="sliding-puzzle">
     <fieldset>
         <div class="col-md-12">
@@ -83,14 +87,13 @@
         </div>
         <div class="col-md-12">
             <div class="btn-group puzzle">
-                <button type="button" class="btn btn-primary" ng-click="puzzle.api.solve()">oplossen</button>
+                <button onclick='klik()' type="button" class="btn btn-primary" ng-click="puzzle.api.solve()">oplossen</button>
                 <button type="reset" class="btn btn-primary" onclick="window.location.reload()">reset</button>
-                <a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" data-placement="auto top">info</a>
+                <a onclick="klik()" tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" data-placement="auto top">info</a>
                 <button type="button" class="btn btn-primary score">score: <strong>{{puzzle.api.moves}}</strong></button>
             </div>
         </div>
     </fieldset>
 </script>
-
 </body>
 </html>

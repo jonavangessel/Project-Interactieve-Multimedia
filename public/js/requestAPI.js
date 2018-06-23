@@ -1,35 +1,33 @@
-$( document ).ready(function() {
+// $( document ).ready(function() {
+//     $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
+//         var data = '';
+//         $.each(status, function (key, value) {
+//                 data += value.description;
+//         });
+//         var description = data.replace(/undefined/g, "");
+//         alert(description)
+//     });
+//
+//
+//     $('[data-toggle="popover"]').popover({title: "title", content: "description", animation: true});
+//
+//     $('.popover-dismiss').popover({
+//         trigger: 'focus'
+//     })
+// });
+
+function klik() {
+    document.getElementById("overlay").style.display = "block";
     $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
         var data = '';
         $.each(status, function (key, value) {
-                data += value.description;
+            data += value.description;
         });
         var description = data.replace(/undefined/g, "");
-        alert(description)
+        var div = document.getElementById("text");
+        div.innerHTML += description
     });
-
-
-    $('[data-toggle="popover"]').popover({title: "title", content: "description", animation: true});
-
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    })
-});
-
-// function klik() {
-//     $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
-//         var dataTitle = '';
-//         var dataDescription = '';
-//         $.each(status, function (key, value) {
-//             dataDescription += value.description;
-//             dataTitle += value.titles;
-//         });
-//         var titel = dataTitle.replace(/undefined/g, "");
-//         var beschrijving = dataDescription.replace(/undefined/g, "");
-//         document.getElementById("bij").setAttribute("title", titel);
-//         document.getElementById("bij").setAttribute("data-content", beschrijving)
-//     });
-// }
+}
 
 /**
  * Uses API to display description and title in popover
@@ -71,3 +69,7 @@ $( document ).ready(function() {
 //         alert("yehes")
 //     });
 // }
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
