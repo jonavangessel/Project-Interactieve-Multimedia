@@ -23,9 +23,13 @@ function klik() {
         $.each(status, function (key, value) {
             data += value.description;
         });
+
         var description = data.replace(/undefined/g, "");
-        var div = document.getElementById("text");
-        div.innerHTML += description
+
+        // var header = document.getElementById("overlayHeader");
+        var overlay = document.getElementById("overlayText");
+
+        overlay.innerHTML += description
     });
 }
 
@@ -72,4 +76,5 @@ function klik() {
 
 function off() {
     document.getElementById("overlay").style.display = "none";
+    document.getElementById("overlayText").innerHTML = ''
 }

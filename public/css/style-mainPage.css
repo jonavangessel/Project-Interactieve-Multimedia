@@ -8,53 +8,47 @@ body {
     background-color: #6280b1 !important;
 }
 
-fieldset.ng-scope {
-    position: relative;
-    width: 50%;
+fieldset {
+    /*position: relative;*/
+    width: 100%;
+}
+
+.table {
+    /*Parent div for sliding puzzle*/
+    display: flex;
+    justify-content: center;
 }
 
 table#hello.sliding-puzzle {
-    display: block;
-    width: 100%;
-    height: auto;
+    /*display: block;*/
+    align-self: center;
+    /*width: 100%;*/
+    /*height: auto;*/
 }
 
-/*DIMENSION OF OVERLAY NOW EQUAL THOSE TO TBODY*/
 
-.transparentOverlay {
-    position: absolute;
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    height: 600px;
-    width: 600px;
-    opacity: 0;
-    background-color: #f8ce46;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
-    width: 600px;
-    opacity: 0.85;
-    transition: 2s ease;
-    background-color: #f8ce46;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
 }
 
-.text {
-    color: #6280b1;
-    font-size: 300%;
+#overlayText {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+    font-size: 25px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
 
 header {
@@ -89,7 +83,6 @@ header h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
 }
 
 .btn.btn-primary.score:hover, .btn.btn-primary.score:active, .btn.btn-primary.score:focus {
@@ -99,15 +92,20 @@ header h1 {
     cursor: default;
 }
 
+.image.float-left {
+    max-height: 50%;
+    max-width: 50%;
+}
+
 /* Puzzle widgets */
 
-.sliding-puzzle {
-    margin: auto;
-    display: inline-block;
-    /*border: 15px solid #f8ce46;*/
-    /*border-radius: 10px;*/
-    border-spacing: 0;
-}
+/*.sliding-puzzle {*/
+    /*margin: auto;*/
+    /*display: inline-block;*/
+    /*!*border: 15px solid #f8ce46;*!*/
+    /*!*border-radius: 10px;*!*/
+    /*border-spacing: 0;*/
+/*}*/
 .sliding-puzzle td {
     border-collapse: collapse;
     border: 2px outset white;
@@ -122,25 +120,25 @@ header h1 {
     border: none;
 }
 
-/* Popover */
-.popover {
-    border: 2px solid #6280b1 !important;
-}
-/* Popover Header */
-.popover-title {
-    background-color: #6280b1 !important;
-    color: #f8ce46 !important;
-    font-size: 28px;
-    font-family: 'Jua', sans-serif;
-    text-align:center;
+/*!* Popover *!*/
+/*.popover {*/
+    /*border: 2px solid #6280b1 !important;*/
+/*}*/
+/*!* Popover Header *!*/
+/*.popover-title {*/
+    /*background-color: #6280b1 !important;*/
+    /*color: #f8ce46 !important;*/
+    /*font-size: 28px;*/
+    /*font-family: 'Jua', sans-serif;*/
+    /*text-align:center;*/
 
-}
-/* Popover Body */
-.popover-content {
-    background-color: #6280b1;
-    color: #f8ce46;
-    padding: 25px;
-}
+/*}*/
+/*!* Popover Body *!*/
+/*.popover-content {*/
+    /*background-color: #6280b1;*/
+    /*color: #f8ce46;*/
+    /*padding: 25px;*/
+/*}*/
 
 .col-md-12.footer {
     position: fixed;
@@ -202,28 +200,4 @@ header h1 {
 }
 .fa-youtube-play:hover {
     color: #ff0000;
-}
-
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-}
-
-#text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 25px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
 }
