@@ -1,5 +1,5 @@
-@media (max-height: 1044px) {.col-md-12.footer .btn-group {display: none;}}
-@media (max-height: 974px) {.col-md-12.footer p {display: none;}}
+@media (max-height: 910px) {.col-md-12.footer .btn-group {display: none;}}
+@media (max-height: 860px) {.col-md-12.footer p {display: none;}}
 @media (max-width: 700px) {
     table#hello.sliding-puzzle {width: 415px !important; height: 415px !important;}
     .sliding-puzzle td {width: 100px !important; height: 100px !important;}}
@@ -24,15 +24,15 @@ body {
 Header
  */
 header {
-    min-height: 200px;
+    min-height: 150px;
     overflow: hidden;
     display: block;
     width: 100%;
     text-align: center;
 }
 header h1 {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     font-size: 500%;
 }
 fieldset {
@@ -86,6 +86,7 @@ table#hello.sliding-puzzle {
 Overlay
  */
 #overlay {
+    text-align: center;
     position: fixed;
     display: none;
     width: 100%;
@@ -99,14 +100,15 @@ Overlay
     cursor: pointer;
 }
 #overlayText {
+    padding: 10%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    overflow: auto !important;
+    overflow: scroll;
 }
 
 /*
