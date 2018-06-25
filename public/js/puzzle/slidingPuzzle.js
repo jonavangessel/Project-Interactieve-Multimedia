@@ -1,3 +1,4 @@
+
 (function(angular) {
     'use strict';
 
@@ -95,6 +96,7 @@
                     }
                 }
                 return true;
+                klik();    //Displays overlay with info when puzzle is solved
             };
 
             /**

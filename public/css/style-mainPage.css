@@ -1,56 +1,28 @@
-/* General */
+@media (max-height: 1044px) {.col-md-12.footer .btn-group {display: none;}}
+@media (max-height: 974px) {.col-md-12.footer p {display: none;}}
+@media (max-width: 700px) {
+    table#hello.sliding-puzzle {width: 415px !important; height: 415px !important;}
+    .sliding-puzzle td {width: 100px !important; height: 100px !important;}}
+@media (max-width: 500px) {
+    table#hello.sliding-puzzle {width: 215px !important; height: 215px !important;}
+    .sliding-puzzle td {width: 50px !important; height: 50px !important;}}
+@media (max-width: 440px) {header h1 {font-size: 400%;}}
+@media (max-width: 360px) {header h1 {font-size: 350%;}}
+
+/*
+General
+*/
 * {
     font-family: 'Jua', sans-serif;
 }
-
 body {
     color: #f8ce46 !important;
     background-color: #6280b1 !important;
 }
 
-fieldset {
-    /*position: relative;*/
-    width: 100%;
-}
-
-.table {
-    /*Parent div for sliding puzzle*/
-    display: flex;
-    justify-content: center;
-}
-
-table#hello.sliding-puzzle {
-    /*display: block;*/
-    align-self: center;
-    /*width: 100%;*/
-    /*height: auto;*/
-}
-
-
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-}
-
-#overlayText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 25px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
-
+/*
+Header
+ */
 header {
     min-height: 200px;
     overflow: hidden;
@@ -58,33 +30,36 @@ header {
     width: 100%;
     text-align: center;
 }
-
 header h1 {
     padding-top: 5%;
     padding-bottom: 5%;
     font-size: 500%;
 }
-
-@media (max-width: 440px) {
-    header h1 {
-        font-size: 400%;
-    }
-
+fieldset {
+    width: 100%;
 }
 
-@media (max-width: 360px) {
-    header h1 {
-        font-size: 350%;
-    }
+/*
+Puzzle
+ */
+.table {
+    display: flex;
+    justify-content: center;
 }
-
+table#hello.sliding-puzzle {
+    align-self: center;
+    width: 615px;
+    height: 615px;
+    border: 15px solid #f8ce46;
+    border-radius: 10px;
+    border-spacing: 0;
+}
 .btn-group.puzzle {
     width: 265px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 .btn.btn-primary.score:hover, .btn.btn-primary.score:active, .btn.btn-primary.score:focus {
     color: #fff;
     background-color: #337ab7;
@@ -92,20 +67,7 @@ header h1 {
     cursor: default;
 }
 
-.image.float-left {
-    max-height: 50%;
-    max-width: 50%;
-}
-
 /* Puzzle widgets */
-
-/*.sliding-puzzle {*/
-    /*margin: auto;*/
-    /*display: inline-block;*/
-    /*!*border: 15px solid #f8ce46;*!*/
-    /*!*border-radius: 10px;*!*/
-    /*border-spacing: 0;*/
-/*}*/
 .sliding-puzzle td {
     border-collapse: collapse;
     border: 2px outset white;
@@ -120,7 +82,36 @@ header h1 {
     border: none;
 }
 
-/*!* Popover *!*/
+/*
+Overlay
+ */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+#overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    overflow: auto !important;
+}
+
+/*
+Popover
+*/
 /*.popover {*/
     /*border: 2px solid #6280b1 !important;*/
 /*}*/
@@ -131,7 +122,6 @@ header h1 {
     /*font-size: 28px;*/
     /*font-family: 'Jua', sans-serif;*/
     /*text-align:center;*/
-
 /*}*/
 /*!* Popover Body *!*/
 /*.popover-content {*/
@@ -140,6 +130,9 @@ header h1 {
     /*padding: 25px;*/
 /*}*/
 
+/*
+Footer
+ */
 .col-md-12.footer {
     position: fixed;
     left: 0;
@@ -147,29 +140,12 @@ header h1 {
     width: 100%;
     text-align: center;
 }
-
 .col-md-12.footer p {
     margin-top: 10px;
 }
-
 .col-md-12.footer p a {
     color: #f8ce46;
 }
-
-
-@media (max-height: 1044px) {
-    .col-md-12.footer .btn-group {
-        display: none;
-    }
-    /* Ruimte tussen footer buttons en body is minimaal 50px. */
-}
-@media (max-height: 974px) {
-    .col-md-12.footer p {
-        display: none;
-    }
-    /* Ruimte tussen copyright line en body is minimaal 30px. */
-}
-
 .btn.btn-primary a {
     color: #fff;
 }
@@ -188,7 +164,6 @@ header h1 {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
 }
-
 .fa-facebook-square:hover {
     color: #fff;
 }

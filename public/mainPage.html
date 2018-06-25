@@ -24,9 +24,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="js/requestAPI.js"></script>
     <script type="text/javascript" src="js/puzzle/slidingPuzzle.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-    <script src="js/requestAPI.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style-mainPage.css"/>
@@ -35,8 +35,12 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
+
 <body ng-app="puzzleApp">
 
+<!--
+Header element
+//-->
 <div class="container-fluid">
     <div class="col-md-12">
         <header>
@@ -45,24 +49,24 @@
     </div>
 </div>
 
+<!--
+Puzzle element
+//-->
 <div class="container-fluid">
-        <!--<div class="col-md-3">-->
-            <!--&lt;!&ndash;<img class="image float-left" src="img/rembrandt.png"/>&ndash;&gt;-->
-        <!--</div>-->
-        <div class="co-md-12" ng-include="type">
-
-        </div>
-        <!--<div class="col-md-3">-->
-            <!--&lt;!&ndash;<h3>scoreboard</h3>&ndash;&gt;-->
-        <!--</div>-->
+    <div class="co-md-12" ng-include="type"></div>
 </div>
 
-
+<!--
+Overlay
+//-->
 <div onclick="off()" id="overlay">
     <!--<div id="overlayHeader"></div>-->
     <div id="overlayText"></div>
 </div>
 
+<!--
+Footer element
+//-->
 <div class="container-fluid">
     <div class="col-md-12 footer">
         <div class="btn-group">
@@ -91,7 +95,9 @@
     </div>
 </div>
 
-
+<!--
+Puzzle script
+//-->
 <script type="text/ng-template" id="sliding-puzzle">
     <fieldset>
         <div class="col-md-12 table">
@@ -108,5 +114,7 @@
         </div>
     </fieldset>
 </script>
+
+
 </body>
 </html>

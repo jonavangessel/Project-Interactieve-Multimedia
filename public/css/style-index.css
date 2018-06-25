@@ -1,12 +1,22 @@
+@media (max-width: 440px) {header h1 {font-size: 400%;}}
+@media (max-width: 360px) {header h1 {font-size: 350%;}}
+@media (max-height: 498px) {.col-md-12.footer .btn-group {display: none;}}
+@media (max-height: 444px) {.col-md-12.footer p {display: none;}}
+
+/*
+General
+ */
 * {
     font-family: 'Jua', sans-serif;
 }
-
 body {
     color: #f8ce46 !important;
     background-color: #6280b1 !important;
 }
 
+/*
+Header
+ */
 header {
     min-height: 200px;
     overflow: hidden;
@@ -14,58 +24,45 @@ header {
     width: 100%;
     text-align: center;
 }
-
 header h1 {
     padding-top: 5%;
     padding-bottom: 5%;
     font-size: 500%;
 }
 
-@media (max-width: 440px) {
-    header h1 {
-        font-size: 400%;
-    }
-
-}
-
-@media (max-width: 360px) {
-    header h1 {
-        font-size: 350%;
-    }
-}
-
+/*
+Input form
+ */
 form {
     font-size: 200%;
     text-align: center;
     margin: auto;
 }
-
 form a {
     margin-top: 10px;
 }
-
 input {
     text-align: center;
 }
-
 .form-control {
     margin: auto;
     width: 10%;
     max-width: 450px;
 }
-
 .btn.btn-info.btn-lg {
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
 }
-
 .btn.btn-info.btn-lg:hover {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
 }
 
+/*
+Footer
+ */
 .col-md-12.footer {
     position: fixed;
     left: 0;
@@ -73,29 +70,12 @@ input {
     width: 100%;
     text-align: center;
 }
-
 .col-md-12.footer p {
     margin-top: 10px;
 }
-
 .col-md-12.footer p a {
     color: #f8ce46;
 }
-
-
-@media (max-height: 498px) {
-    .col-md-12.footer .btn-group {
-        display: none;
-    }
-    /* Ruimte tussen footer buttons en body is minimaal 50px. */
-}
-@media (max-height: 444px) {
-    .col-md-12.footer p {
-        display: none;
-    }
-    /* Ruimte tussen copyright line en body is minimaal 30px. */
-}
-
 .btn.btn-primary a {
     color: #fff;
 }
@@ -114,7 +94,6 @@ input {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
 }
-
 .fa-facebook-square:hover {
     color: #fff;
 }
