@@ -48,8 +48,8 @@ Puzzle
 }
 table#hello.sliding-puzzle {
     align-self: center;
-    width: 615px;
-    height: 615px;
+    max-width: 615px;
+    max-height: 615px;
     border: 15px solid #f8ce46;
     border-radius: 10px;
     border-spacing: 0;
