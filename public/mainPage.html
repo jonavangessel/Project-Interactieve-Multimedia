@@ -60,8 +60,10 @@ Puzzle element
 Overlay
 //-->
 <div onclick="off()" id="overlay">
-    <!--<div id="overlayHeader"></div>-->
-    <p id="overlayText"></p>
+    <div id="overlayText">
+        <h1 id="titel"></h1><br>
+        <p id="beschrijving"></p>
+    </div>
 </div>
 
 <!--
@@ -101,7 +103,7 @@ Puzzle script
 <script type="text/ng-template" id="sliding-puzzle">
     <fieldset>
         <div class="col-md-12 table">
-            <sliding-puzzle id="hello" api="puzzle.api" size="4x4" src="img/mike.jpg"></sliding-puzzle>
+            <sliding-puzzle id="hello" api="puzzle.api" size="4x4" src="img/nachtwacht.jpg"></sliding-puzzle>
         </div>
         <div class="col-md-12">
             <div class="btn-group puzzle">

@@ -19,17 +19,20 @@
 function klik() {
     document.getElementById("overlay").style.display = "block";
     $.get("https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=SGSqBgrf&format=json", function (status) {
-        var data = '';
+        var titel = '';
+        var beschrijving = '';
         $.each(status, function (key, value) {
-            data += value.description;
+            titel += value.title;
+            beschrijving += value.description;
         });
 
-        var description = data.replace(/undefined/g, "");
+        var titlePainting = titel.replace(/undefined/g, "");
+        var descriptionPainting = beschrijving.replace(/undefined/g, "");
+        var divTitel = document.getElementById("titel");
+        var divBeschrijving = document.getElementById("beschrijving");
 
-        // var header = document.getElementById("overlayHeader");
-        var overlay = document.getElementById("overlayText");
-
-        overlay.innerHTML += description
+        divTitel.innerHTML += titlePainting;
+        divBeschrijving.innerHTML += descriptionPainting;
     });
 }
 
@@ -76,5 +79,6 @@ function klik() {
 
 function off() {
     document.getElementById("overlay").style.display = "none";
-    document.getElementById("overlayText").innerHTML = ''
+    document.getElementById("overlayText").innerHTML = '';
+    window.location.replace("enterReference.html")
 }
