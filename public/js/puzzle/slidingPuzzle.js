@@ -95,8 +95,8 @@
                         }
                     }
                 }
-                klik();    //Displays overlay with info when puzzle is solved
                 return true;
+                klik();    //Displays overlay with info when puzzle is solved
             };
 
             /**
